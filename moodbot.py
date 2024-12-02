@@ -5,6 +5,7 @@ import os
 import re
 import sqlite3
 import uuid
+from dotenv import load_dotenv
 from collections import defaultdict
 from datetime import datetime, timedelta
 from hazm import Normalizer
@@ -20,12 +21,16 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Telegram API credentials
-api_id = "api_id_here"
-api_hash = "api_hash_here"
-bot_token = "bot_token_here"
-admin_group_id = int("admin_group_id_here")  # Admin group for feedback
-group_id = int("group_id_here")  # Group where the bot is active
+# Telegram API credentials
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+bot_token = os.getenv("BOT_TOKEN")
+admin_group_id = int(os.getenv("ADMIN_GROUP_ID"))  # Admin group for feedback
+group_id = int(os.getenv("GROUP_ID"))  # Group where the bot is active
 proxy = ("socks5", "127.0.0.1", 1234)  # change these if needed
 
 # Path to local model

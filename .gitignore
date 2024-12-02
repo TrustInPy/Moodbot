@@ -26,6 +26,5 @@ local_model/
 mood_summary.png
 
 # Sensitive files
-*.env
 .env
 secrets/
