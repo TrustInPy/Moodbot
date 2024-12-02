@@ -24,9 +24,9 @@ logging.basicConfig(
 api_id = "api_id_here"
 api_hash = "api_hash_here"
 bot_token = "bot_token_here"
-admin_group_id = int('admin_group_id_here')  # Admin group for feedback
-group_id = int('group_id_here')  # Group where the bot is active
-proxy = ("socks5", "127.0.0.1", 1234) #change these if needed
+admin_group_id = int("admin_group_id_here")  # Admin group for feedback
+group_id = int("group_id_here")  # Group where the bot is active
+proxy = ("socks5", "127.0.0.1", 1234)  # change these if needed
 
 # Path to local model
 model_path = "local_model"
@@ -204,7 +204,8 @@ async def mood_analyzer(event):
     """
     Analyze and save sentiment of new messages.
     """
-    if event.is_group and event.raw_text:
+    # Check if the message is from the specific group
+    if event.is_group and event.chat_id == group_id and event.raw_text:
         message_text = preprocess_text(event.raw_text)
         sentiment, score = analyze_sentiment(message_text)
         unique_id = save_message_data(message_text, sentiment, score)
@@ -212,6 +213,7 @@ async def mood_analyzer(event):
         today = datetime.now().strftime("%Y-%m-%d")
         messages_data[today].append(sentiment)
 
+        # Handle negative messages
         if sentiment == "NEGATIVE" and score > 0.6:
             negativity_percentage = score * 100
             await client.send_message(
