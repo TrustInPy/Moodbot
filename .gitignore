@@ -1,0 +1,31 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Model and data files
+model/
+local_model/
+mood_summary.png
+
+# Sensitive files
+*.env
+.env
+secrets/
