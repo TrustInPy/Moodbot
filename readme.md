@@ -1,6 +1,6 @@
 # Telegram Sentiment Analysis Bot
 
-This is a Telegram bot designed to analyze the sentiment of group messages and provide daily mood summaries. It uses a Persian BERT model for sentiment analysis, stores data in a SQLite database, and supports admin feedback for continuous improvement.
+This is a Telegram bot designed to analyze the sentiment of group messages and provide daily mood summaries. It uses a `Persian`(`Farsi`) BERT model for sentiment analysis, stores data in a SQLite database, and supports admin feedback for continuous improvement.
 
 ---
 
