@@ -36,9 +36,13 @@ This is a Telegram bot designed to analyze the sentiment of group messages and p
    ```bash
    pip install -r requirements.txt
 
-4. Set up your .env file for sensitive configurations (optional):
+4. Set up your .env file for sensitive configurations:
    ```bash
-   TELEGRAM_API_ID=<your_api_id>
-   TELEGRAM_API_HASH=<your_api_hash>
+   API_ID=<your_api_id>
+   API_HASH=<your_api_hash>
    BOT_TOKEN=<your_bot_token>
+   ADMIN_GROUP_ID=<your_admin_group_id>
+   GROUP_ID=<your_group_id>
+   PROXY_URL=<PROTOCOL://IP:PORT>
+   USE_PROXY=< 0 or 1 >
 
