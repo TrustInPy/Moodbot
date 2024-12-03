@@ -6,6 +6,7 @@ __pycache__/
 # Virtual environments
 env/
 venv/
+.venv/
 ENV/
 
 # Jupyter Notebook checkpoints
@@ -19,6 +20,7 @@ Thumbs.db
 *.log
 *.sqlite3
 *.db
+*.session
 
 # Model and data files
 model/
