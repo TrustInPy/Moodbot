@@ -4,5 +4,6 @@ emoji==2.14.0
 hazm==0.10.0
 matplotlib==3.9.2
 python-dotenv==1.0.1
+python-socks[asyncio]
 telethon==1.38.1
 transformers==4.36.0
