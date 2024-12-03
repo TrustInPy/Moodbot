@@ -24,8 +24,8 @@ This is a Telegram bot designed to analyze the sentiment of group messages and p
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/telegram-sentiment-bot.git
-   cd telegram-sentiment-bot
+   git clone https://github.com/TrustInPy/Moodbot.git
+   cd Moodbot
 
 2. Create a virtual environment:
    ```bash
@@ -43,6 +43,6 @@ This is a Telegram bot designed to analyze the sentiment of group messages and p
    BOT_TOKEN=<your_bot_token>
    ADMIN_GROUP_ID=<your_admin_group_id>
    GROUP_ID=<your_group_id>
-   PROXY_URL=<PROTOCOL://IP:PORT>
+   PROXY_URL=<PROTOCOL://HOST:PORT>
    USE_PROXY=< 0 or 1 >
 
