@@ -31,7 +31,14 @@ api_hash = os.getenv("API_HASH")
 bot_token = os.getenv("BOT_TOKEN")
 admin_group_id = int(os.getenv("ADMIN_GROUP_ID"))  # Admin group for feedback
 group_id = int(os.getenv("GROUP_ID"))  # Group where the bot is active
-proxy = ("socks5", "127.0.0.1", 1234)  # change these if needed
+proxy_url = os.getenv("PROXY_URL")
+use_proxy = bool(int(os.getenv("USE_PROXY")))
+proxy = None
+if use_proxy:
+    protocol = proxy_url.split("://")[0]
+    host = proxy_url.split("://")[1].split(":")[0]
+    port = proxy_url.split("://")[1].split(":")[1]
+    proxy = (protocol, host, int(port), True)
 
 # Path to local model
 model_path = "local_model"
